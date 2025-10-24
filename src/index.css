@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Medical blue theme - trust and professionalism */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary - Medical Blue */
+    --primary: 210 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 85% 40%;
+    
+    /* Secondary - Healthcare Green */
+    --secondary: 150 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 150 60% 45%;
+
+    /* Muted backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent - Warm accent */
+    --accent: 195 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status colors */
+    --success: 150 60% 50%;
+    --warning: 38 92% 50%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --info: 210 85% 45%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 210 85% 45%;
+
+    --radius: 0.75rem;
+
+    /* Gradients for modern appeal */
+    --gradient-primary: linear-gradient(135deg, hsl(210 85% 45%) 0%, hsl(195 75% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(150 60% 50%) 0%, hsl(165 60% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 30% 96%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 15% / 0.1);
+    --shadow-glow: 0 0 30px hsl(210 85% 45% / 0.3);
+
+    /* Animations */
+    --transition-base: all 0.2s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 215 30% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 210 85% 45%;
+  }
+
+  .dark {
+    --background: 215 28% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 85% 55%;
+    --primary-foreground: 215 25% 10%;
+    --primary-hover: 210 85% 60%;
+
+    --secondary: 150 55% 50%;
+    --secondary-foreground: 215 25% 10%;
+    --secondary-hover: 150 55% 55%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 195 75% 55%;
+    --accent-foreground: 215 25% 10%;
+
+    --success: 150 55% 50%;
+    --warning: 38 92% 50%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --info: 210 85% 55%;
+
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 210 85% 55%;
+
+    --shadow-glow: 0 0 30px hsl(210 85% 55% / 0.4);
+    
+    --sidebar-background: 215 30% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 85% 55%;
+    --sidebar-primary-foreground: 215 25% 10%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 210 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
